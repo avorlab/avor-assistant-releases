@@ -1,25 +1,17 @@
-# AVOR Assistant — teste em outro computador
+# AVOR Assistant 0.16.6
 
-Requisitos: Windows 10 2004 ou mais recente / Windows 11, com suporte a aplicativos x64.
+Windows 10 2004 (build 19041) ou mais recente / Windows 11, com suporte a aplicativos x64.
 
-1. Copie AVOR-Assistant-Setup-0.16.3-Windows-x64.exe para o outro PC e execute.
-2. Escolha os atalhos e se deseja iniciar com o Windows.
-3. Abra o AVOR. As configurações do notch, dock, aparência e idioma ficam na engrenagem.
+Execute AVOR-Assistant-Setup-0.16.6-Windows-x64.exe e siga o assistente. Quem usa uma versão anterior pode instalar por cima: notas, calendário e preferências permanecem no perfil local de cada usuário/computador.
 
-A opção de letras está temporariamente oculta. Reprodução, volume e demais controles de música continuam disponíveis. O código das letras foi preservado para trabalho posterior.
+Esta versão inclui o notch, música/letras, notas, agenda, sistema, arquivos e utilitários. Dock e notificações estão temporariamente desativados. A barra de tarefas, o menu Iniciar e as notificações do Windows permanecem nativos. Não há preparação de certificado de notificações neste instalador.
 
-O instalador inclui os componentes locais de conversão e download. O programa principal usa o runtime C estaticamente vinculado. Não é necessário instalar Rust, Python ou o SDK de desenvolvimento. Serviços online, como clima e download por link, continuam dependendo de internet e da disponibilidade do serviço.
+Configurações > Sobre > Verificar se há atualizações consulta o GitHub, baixa e verifica o arquivo e permite instalar/reiniciar. As versões que tinham esse botão em espera precisam desta instalação manual uma vez. Veja UPDATES.md.
 
-## Notificações reais do Windows
+O tema usa as capacidades disponíveis no computador. Windows 10 e drivers sem o efeito nativo recebem um fallback legível; uma falha de material não deve impedir a abertura e os cliques. Veja COMPATIBILITY.md, incluindo a correção do erro 0x80070057.
 
-A tarefa opcional de notificações vem desmarcada. Marcá-la autoriza instalar o certificado público local de teste AVOR Assistant em TrustedPeople e registrar a identidade do aplicativo. Essa etapa abre o pedido de autorização de administrador do Windows. Não instala nada em Root e não altera o Defender. A chave privada do certificado não acompanha o instalador.
+O pacote inclui os motores locais de conversão e download. Não é necessário instalar Rust, Python ou SDKs de desenvolvimento. Downloads por link e letras dependem da internet e do conteúdo disponível no serviço. Letras por palavra dependem de timestamps reais; o ajuste de teste padrão é +1,5 segundo.
 
-Depois, abra Configurações do AVOR → Área de trabalho → Notificações e solicite a permissão de leitura ao Windows. Sem essa preparação, o restante do aplicativo funciona, mas o espelhamento de notificações reais pode não estar disponível.
+É uma versão de teste, sem assinatura pública de editor. O Windows pode exibir um aviso de editor desconhecido. Confira a origem e o checksum; não é necessário desativar o antivírus.
 
-É um pacote de teste, ainda sem assinatura pública de publicação. O Windows pode mostrar um aviso de editor desconhecido. Confira que o arquivo veio deste projeto; não é necessário desativar o antivírus.
-
-## Dados e desinstalação
-
-Cada usuário e computador cria seu próprio perfil em %LOCALAPPDATA%\AVOR Assistant\profile. Este pacote não inclui as notas, eventos, histórico de clipboard, atalhos pessoais, localização, senhas ou configurações do PC onde foi gerado.
-
-Desinstale pelo menu de aplicativos instalados do Windows. Os dados do perfil são preservados. O certificado local de teste, se autorizado, pode ser removido depois em certlm.msc → Pessoas Confiáveis → Certificados → AVOR Assistant.
+O pacote não inclui notas, eventos, clipboard, senhas ou preferências pessoais do computador onde foi gerado. O perfil fica em %LOCALAPPDATA%\AVOR Assistant\profile. A desinstalação pelo Windows preserva esse perfil.
